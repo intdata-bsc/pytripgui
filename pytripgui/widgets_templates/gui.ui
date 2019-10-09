@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GUI</class>
+ <widget class="QWidget" name="GUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>406</width>
+    <height>337</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Idact GUI</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>401</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="deploy_notebook_tab">
+    <attribute name="title">
+     <string>Deploy notebook</string>
+    </attribute>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="4" column="1" colspan="2">
+      <widget class="QSpinBox" name="memory_edit">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="3">
+      <widget class="QPushButton" name="show_native_arguments_button">
+       <property name="text">
+        <string>Show native arguments</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1" colspan="3">
+      <widget class="QSpinBox" name="cores_edit"/>
+     </item>
+     <item row="0" column="1" colspan="3">
+      <widget class="QLineEdit" name="cluster_name_deployn_edit"/>
+     </item>
+     <item row="1" column="1" colspan="3">
+      <widget class="QSpinBox" name="nodes_edit"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="memory_label">
+       <property name="text">
+        <string>Memory per node</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1" colspan="3">
+      <widget class="QLineEdit" name="walltime_edit"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="cores_label">
+       <property name="text">
+        <string>Cores per node</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="nodes_label">
+       <property name="text">
+        <string>Nodes</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="cluster_name_deployn_label">
+       <property name="text">
+        <string>Cluster name</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0" colspan="2">
+      <widget class="QPushButton" name="add_native_argument_button">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>Add native argument</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="walltime_label">
+       <property name="maximumSize">
+        <size>
+         <width>139</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Walltime</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="2">
+      <widget class="QPushButton" name="remove_native_argument_button">
+       <property name="text">
+        <string>Remove native argument</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
+      <widget class="QComboBox" name="memory_unit_box">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <item>
+        <property name="text">
+         <string>GiB</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>MiB</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>TiB</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>PiB</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="8" column="0" colspan="4">
+      <widget class="QPushButton" name="deploy_button">
+       <property name="text">
+        <string>Deploy Jupyter Notebook</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="add_cluster_tab">
+    <attribute name="title">
+     <string>Add cluster</string>
+    </attribute>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="9" column="0">
+      <widget class="QLabel" name="actions_file_label">
+       <property name="text">
+        <string>Actions file</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="0">
+      <widget class="QCheckBox" name="use_jupyter_lab_check_box">
+       <property name="text">
+        <string>Use JupyterLab</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="user_label">
+       <property name="text">
+        <string>User</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1" colspan="2">
+      <widget class="QLineEdit" name="cluster_name_addc_edit"/>
+     </item>
+     <item row="6" column="1" colspan="2">
+      <widget class="QComboBox" name="auth_method_box">
+       <item>
+        <property name="text">
+         <string>PUBLIC_KEY</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>ASK_EVERYTIME</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="1" column="1" colspan="2">
+      <widget class="QLineEdit" name="host_edit"/>
+     </item>
+     <item row="9" column="1">
+      <widget class="QPushButton" name="add_actions_file_button">
+       <property name="text">
+        <string>Add</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1" colspan="2">
+      <widget class="QLineEdit" name="password_edit"/>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="key_type_label">
+       <property name="text">
+        <string>Key type</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="auth_method_label">
+       <property name="text">
+        <string>Authentication Method</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="2">
+      <widget class="QPushButton" name="delete_actions_file_button">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>Delete</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="cluster_name_addc_label">
+       <property name="text">
+        <string>Cluster name</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="host_label">
+       <property name="text">
+        <string>Host</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="1">
+      <widget class="QLabel" name="currently_selected_file_label">
+       <property name="font">
+        <font>
+         <italic>false</italic>
+        </font>
+       </property>
+       <property name="text">
+        <string>Currently selected:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="port_label_2">
+       <property name="text">
+        <string>Password</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="port_label">
+       <property name="text">
+        <string>Port</string>
+       </property>
+      </widget>
+     </item>
+     <item row="22" column="0" colspan="3">
+      <widget class="QPushButton" name="add_cluster_button">
+       <property name="text">
+        <string>Add cluster</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1" colspan="2">
+      <widget class="QComboBox" name="key_type_box">
+       <item>
+        <property name="text">
+         <string>RSA_KEY</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="4" column="1" colspan="2">
+      <widget class="QSpinBox" name="port_edit"/>
+     </item>
+     <item row="2" column="1" colspan="2">
+      <widget class="QLineEdit" name="user_edit"/>
+     </item>
+     <item row="10" column="2" rowspan="2">
+      <widget class="QTextBrowser" name="selected_file_path_browser">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="remove_cluster_tab">
+    <attribute name="title">
+     <string>Remove cluster</string>
+    </attribute>
+    <layout class="QGridLayout" name="gridLayout_4">
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="cluster_name_removec_edit"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="cluster_name_removec_label">
+       <property name="text">
+        <string>Cluster name</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" colspan="2">
+      <widget class="QPushButton" name="remove_cluster_button">
+       <property name="text">
+        <string>Remove cluster</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="show_logs_button">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>310</y>
+     <width>109</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(243, 243, 243)</string>
+   </property>
+   <property name="text">
+    <string>Show logs</string>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>cluster_name_deployn_edit</tabstop>
+  <tabstop>nodes_edit</tabstop>
+  <tabstop>cores_edit</tabstop>
+  <tabstop>memory_edit</tabstop>
+  <tabstop>walltime_edit</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>cluster_name_addc_edit</tabstop>
+  <tabstop>host_edit</tabstop>
+  <tabstop>user_edit</tabstop>
+  <tabstop>port_edit</tabstop>
+  <tabstop>auth_method_box</tabstop>
+  <tabstop>key_type_box</tabstop>
+  <tabstop>add_cluster_button</tabstop>
+  <tabstop>cluster_name_removec_edit</tabstop>
+  <tabstop>remove_cluster_button</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
