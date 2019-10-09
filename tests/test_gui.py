@@ -11,6 +11,14 @@ def test_basics(qtbot):
     assert window.isVisible()
     assert window.windowTitle() == 'Idact GUI'
 
+def test_basics_fail(qtbot):
+    assert qt_api.QApplication.instance() is not None
+    window = IdactApp()
+    qtbot.addWidget(window)
+    window.show()
+
+    assert window.isVisible()
+    assert window.windowTitle() == 'Idact not GUI'
 
 def test():
     assert 1 == 1
