@@ -1,23 +1,5 @@
 import setuptools
 
-from pytripgui.version import git_version
-
-
-def write_version_py(filename='VERSION'):
-    cnt = """%(version)s
-"""
-
-    GIT_REVISION = git_version()
-    a = open(filename, 'w')
-    try:
-        a.write(cnt % {'version': GIT_REVISION})
-    finally:
-        a.close()
-
-
-write_version_py()
-
-
 with open('README.rst') as readme_file:
     readme = readme_file.read()
 
