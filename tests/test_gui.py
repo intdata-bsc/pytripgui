@@ -1,4 +1,4 @@
-from pytripgui.functionality.idact_app import IdactApp
+from gui.functionality.idact_app import IdactApp
 from pytestqt.qt_compat import qt_api
 
 
