@@ -20,9 +20,6 @@ addons:
 matrix:
     include:
         - os: linux
-          python: 3.6
-          env: TOXENV=packaging
-        - os: linux
           python: 3.5
           env: TOXENV=py35
         - os: linux
@@ -50,5 +47,4 @@ script:
   - pip install -r requirements.txt --upgrade
   - pip install -r tests/requirements-test.txt --upgrade
   - tox --recreate --notest && tox
-  - if [[ "$TRAVIS_TEST_RESULT" == "0" ]] && [[ $TOXENV == "packaging" ]]; then .travis/deploy_package.sh "$TARGET" $PRECMD; fi
 
