@@ -5,7 +5,6 @@ with open('README.rst') as readme_file:
 
 setuptools.setup(
     name='pytrip98gui',
-    version=git_version(),
     packages=setuptools.find_packages(exclude="tests"),
     url='https://github.com/pytrip/pytripgui',
     license='GPL',
@@ -34,7 +33,6 @@ setuptools.setup(
         # that you indicate whether you support Python 2, Python 3 or both.
         'Programming Language :: Python :: 2.7',
     ],
-    package_data={'pytripgui': ['res/*', 'view/*.ui']},
     install_requires=[
         'numpy', 'scipy', 'pytrip98'
     ],
